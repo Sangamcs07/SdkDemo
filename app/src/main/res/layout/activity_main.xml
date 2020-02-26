@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/contentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="This is an Demo app that integrate WexerContentSDK"
+                android:textColor="@color/light_green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="Set config by clicking following button"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="setConfig"
+                android:text="Set Config" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="List of exposed functions"
+                android:textColor="@color/light_green"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/feature_bg"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/usernameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sam7" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:text="sam7@123" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/showPassCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Password" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:onClick="signIn"
+                    android:text="Sign In" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="activateSubscription"
+                android:text="Activate Subscription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/feature_bg"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Consent Tag">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/consentTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13b9710a-b2a6-4620-87a8-8c9946e1b50a" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:onClick="acceptConsent"
+                    android:text="Accept Consent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/feature_bg"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Class Tag Id">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/clstagEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="50122" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Filter By">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/filterByEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="alpha" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Order By">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/orderByEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="desc" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:onClick="getClasses"
+                    android:text="Get Classes data" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="getTenantCollection"
+                android:text="Get Tenant collections" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="getMetadata"
+                android:text="Get On demand meta data" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/feature_bg"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Class Tag Id">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/classtagEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="50122" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:onClick="ondemandPerform"
+                    android:text="Perform data" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="searchOndemand"
+                android:text="On demand Search" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="cancelSubscription"
+                android:text="Cancel Subscription" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="getSignupConsent"
+                android:text="Get SignUp consents"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@android:style/Widget.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</ScrollView>
