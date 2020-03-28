@@ -58,3 +58,17 @@ dependencies {
     implementation 'com.android.installreferrer:installreferrer:1.1'
 
 }
+
+task myTask { tasks ->
+    def list = []
+    doFirst {
+        1.upto(10) { val ->
+            list.add(val)
+        }
+    }
+    doLast {
+        list.each { item ->
+            println(item)
+        }
+    }
+}
